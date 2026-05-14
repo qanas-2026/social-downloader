@@ -20,52 +20,52 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 }
 
 body{
-    font-family:Arial;
     background:#0f0f0f;
+    font-family:Arial;
     color:white;
-    min-height:100vh;
     padding:20px;
 }
 
 .header{
     text-align:center;
-    margin-top:40px;
-    margin-bottom:50px;
+    margin-top:30px;
+    margin-bottom:40px;
 }
 
 .header h1{
-    font-size:35px;
+    font-size:32px;
     margin-bottom:10px;
 }
 
 .header p{
-    color:#aaa;
-    font-size:18px;
+    color:#999;
+    font-size:16px;
 }
 
 .container{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    max-width:400px;
+    width:100%;
+    max-width:350px;
     margin:auto;
 }
 
 .card{
-    padding:22px;
-    border-radius:20px;
-    text-decoration:none;
-    color:white;
-    font-size:22px;
-    font-weight:bold;
+    width:100%;
+    height:75px;
+    border-radius:18px;
+    margin-bottom:20px;
     display:flex;
     align-items:center;
     gap:15px;
+    padding:20px;
+    text-decoration:none;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
     transition:0.3s;
 }
 
 .card:hover{
-    transform:scale(1.04);
+    transform:scale(1.03);
 }
 
 .youtube{
@@ -93,13 +93,14 @@ body{
 }
 
 i{
-    font-size:35px;
+    font-size:34px;
 }
 
 .footer{
     text-align:center;
-    margin-top:50px;
+    margin-top:40px;
     color:#666;
+    font-size:18px;
 }
 
 </style>
@@ -143,11 +144,7 @@ TikTok
 </div>
 
 <div class="footer">
-
-<p>
 Made By Tish 🔥
-</p>
-
 </div>
 
 </body>
