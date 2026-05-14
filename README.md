@@ -21,7 +21,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 body{
     background:#0f0f0f;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
     color:white;
     padding:20px;
 }
@@ -50,7 +50,7 @@ body{
 
 .card{
     width:100%;
-    height:75px;
+    min-height:75px;
     border-radius:18px;
     margin-bottom:20px;
     display:flex;
