@@ -13,16 +13,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
     background:#0f0f0f;
-    color:white;
     font-family:Arial;
+    color:white;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -30,7 +24,7 @@ body{
     padding:20px;
 }
 
-.container{
+.box{
     width:100%;
     max-width:400px;
     text-align:center;
@@ -43,12 +37,7 @@ body{
 }
 
 h1{
-    margin-bottom:10px;
-}
-
-p{
-    color:#aaa;
-    margin-bottom:30px;
+    margin-bottom:15px;
 }
 
 input{
@@ -57,13 +46,13 @@ input{
     border:none;
     border-radius:12px;
     font-size:18px;
-    outline:none;
-    margin-bottom:20px;
+    margin-top:20px;
 }
 
 button{
     width:100%;
     padding:15px;
+    margin-top:20px;
     border:none;
     border-radius:12px;
     background:red;
@@ -72,29 +61,21 @@ button{
     font-weight:bold;
 }
 
-.loading{
-    margin-top:20px;
-    display:none;
-    color:#999;
-}
-
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="box">
 
 <div class="logo">
 <i class="fab fa-youtube"></i>
 </div>
 
-<h1>YouTube Downloader</h1>
-
-<p>
-تحميل الفيديوهات بسهولة
-</p>
+<h1>
+تحميل من يوتيوب
+</h1>
 
 <input
 type="text"
@@ -105,10 +86,6 @@ placeholder="حط لينك الفيديو هنا"
 <button onclick="downloadVideo()">
 تحميل الفيديو
 </button>
-
-<div class="loading" id="loading">
-جاري تجهيز الفيديو...
-</div>
 
 </div>
 
@@ -123,8 +100,6 @@ function downloadVideo(){
         alert("حط لينك الفيديو");
         return;
     }
-
-    document.getElementById("loading").style.display = "block";
 
     window.location.href =
     "https://social-downloader-production-6d44.up.railway.app/download?url="
