@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Instagram Downloader</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+body{
+    background:#0f0f0f;
+    font-family:Arial;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.logo{
+    font-size:70px;
+    margin-top:40px;
+
+    background:linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h1{
+    margin-top:10px;
+}
+
+input{
+    width:90%;
+    max-width:350px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    margin-top:30px;
+    font-size:18px;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+
+    background:linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+    );
+
+    color:white;
+    font-size:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="logo">
+<i class="fab fa-instagram"></i>
+</div>
+
+<h1>تحميل من انستقرام</h1>
+
+<input
+type="text"
+id="videoLink"
+placeholder="حط لينك الريل أو البوست هنا"
+>
+
+<br>
+
+<button onclick="downloadVideo()">
+تحميل
+</button>
+
+<script>
+
+function downloadVideo(){
+
+    let link = document.getElementById("videoLink").value;
+
+    if(link == ""){
+        alert("حط لينك الفيديو");
+        return;
+    }
+
+    alert("تم استلام اللينك :)");
+
+}
+
+</script>
+
+</body>
+</html>
