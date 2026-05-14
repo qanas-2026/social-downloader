@@ -13,31 +13,59 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    background:#111;
     font-family:Arial;
+    background:#0f0f0f;
+    color:white;
+    min-height:100vh;
     padding:20px;
 }
 
-h1{
-    color:white;
+.header{
     text-align:center;
     margin-top:40px;
+    margin-bottom:50px;
 }
 
-.btn{
-    width:90%;
-    margin:20px auto;
-    padding:20px;
-    border-radius:15px;
+.header h1{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#aaa;
+    font-size:18px;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:400px;
+    margin:auto;
+}
+
+.card{
+    padding:22px;
+    border-radius:20px;
+    text-decoration:none;
     color:white;
     font-size:22px;
     font-weight:bold;
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:10px;
-    text-decoration:none;
+    gap:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.04);
 }
 
 .youtube{
@@ -65,7 +93,13 @@ h1{
 }
 
 i{
-    font-size:30px;
+    font-size:35px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:50px;
+    color:#666;
 }
 
 </style>
@@ -74,27 +108,47 @@ i{
 
 <body>
 
-<h1>تحميل من السوشيال ميديا</h1>
+<div class="header">
 
-<a href="youtube.html" class="btn youtube">
+<h1>Social Downloader</h1>
+
+<p>
+تحميل الفيديوهات من السوشيال ميديا
+</p>
+
+</div>
+
+<div class="container">
+
+<a href="youtube.html" class="card youtube">
 <i class="fab fa-youtube"></i>
-يوتيوب
+YouTube
 </a>
 
-<a href="facebook.html" class="btn facebook">
+<a href="facebook.html" class="card facebook">
 <i class="fab fa-facebook"></i>
-فيسبوك
+Facebook
 </a>
 
-<a href="instagram.html" class="btn instagram">
+<a href="instagram.html" class="card instagram">
 <i class="fab fa-instagram"></i>
-انستقرام
+Instagram
 </a>
 
-<a href="tiktok.html" class="btn tiktok">
+<a href="tiktok.html" class="card tiktok">
 <i class="fab fa-tiktok"></i>
-تيك توك
+TikTok
 </a>
+
+</div>
+
+<div class="footer">
+
+<p>
+Made By Tish 🔥
+</p>
+
+</div>
 
 </body>
 </html>
