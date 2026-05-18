@@ -1,5 +1,6 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, send_file
 from yt_dlp import YoutubeDL
+import os
 
 app = Flask(__name__)
 
@@ -16,15 +17,23 @@ def download():
         return "No URL"
 
     ydl_opts = {
-        "format": "best"
+        'format': 'best',
+        'outtmpl': 'video.%(ext)s'
     }
 
     with YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(url, download=False)
+        ydl.download([url])
 
-        video_url = info["url"]
+    for file in os.listdir():
 
-    return redirect(video_url)
+        if file.startswith("video"):
+
+            return send_file(
+                file,
+                as_attachment=True
+            )
+
+    return "Error"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
